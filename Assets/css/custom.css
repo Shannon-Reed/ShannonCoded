@@ -1,0 +1,387 @@
+/* ============================================================
+   ShannonCoded | Custom Styles
+   Loaded after assets/css/main.css (Stellar HTML5 UP)
+   Sections: Theme, Header, Navigation, Experience, Skills,
+             Projects, Buttons, Education, Headings, Responsive,
+             Accessibility
+   ============================================================ */
+
+/* 01. SITE BACKGROUND ---------------------------------------- */
+body {
+    background-color: #15291E !important;
+    background-image:
+        linear-gradient(rgba(38, 61, 49, 0.8), rgba(38, 61, 49, 0.8)),
+        url("../../images/mossy-stone.jpg") !important;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* 02. INTRODUCTION HEADER ------------------------------------ */
+#header {
+    position: relative;
+    max-width: 58em;
+    margin: 2em auto 3em;
+    padding: 4em 3.5em;
+    background: transparent !important;
+    border: 2px solid #A9BDA5;
+    border-radius: 1em;
+}
+
+/* The gap between frames remains transparent to the page background. */
+#header::before {
+    content: "";
+    position: absolute;
+    inset: 40px;
+    background-color: rgba(20, 43, 30, 0.75);
+    border: 1px solid #728F76;
+    border-radius: 0.65em;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#header > * {
+    position: relative;
+    z-index: 1;
+}
+
+#header .actions {
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+#header .actions .button {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+    color: #FFFFFF !important;
+}
+
+/* Keep Stellar's initial preload animation */
+body.is-preload #header {
+    opacity: 0;
+    transform: translateY(0.5em);
+}
+
+/* Normal header state after loading */
+body:not(.is-preload) #header {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+}
+
+/* 03. NAVIGATION --------------------------------------------- */
+#nav {
+    background-color: #F4F1E9;
+    border-radius: 0.65em 0.65em 0 0;
+}
+
+#nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+#nav ul li a {
+    --tab-bg: #E8E3D7;
+    --tab-text: #322F29;
+    --tab-bdc: #322F29;
+    display: inline-block;
+    padding: 0 1.35em;
+    border: 1px solid var(--tab-bdc);
+    border-radius: 3em;
+    background-color: var(--tab-bg);
+    color: var(--tab-text);
+    font-weight: 600;
+    transition: background-color 0.25s ease, color 0.25s ease,
+                transform 0.25s ease, box-shadow 0.25s ease,
+                filter 0.25s ease;
+}
+
+/* Tab palette follows the order of links in the nav HTML. */
+#nav ul li:nth-child(1) a { --tab-bg: #DCE8D5; --tab-text: #202F23; --tab-bdc: #202F23; } /* About */
+#nav ul li:nth-child(2) a { --tab-bg: #E6D3BF; --tab-text: #44352A; --tab-bdc: #44352A; } /* Experience */
+#nav ul li:nth-child(3) a { --tab-bg: #E8E3D7; --tab-text: #322F29; --tab-bdc: #322F29; } /* Skills */
+#nav ul li:nth-child(4) a { --tab-bg: #C8D8C5; --tab-text: #203023; --tab-bdc: #203023; } /* Projects */
+#nav ul li:nth-child(5) a { --tab-bg: #D8C5B3; --tab-text: #46372C; --tab-bdc: #46372C; } /* Education */
+#nav ul li:nth-child(6) a { --tab-bg: #355B47; --tab-text: #FFFFFF; --tab-bdc: #355B47; } /* Contact */
+
+/* Keep tab palette even when Stellar marks a link active. */
+#nav ul li a.active,
+#nav ul li a:hover {
+    background-color: var(--tab-bg);
+    color: var(--tab-text);
+}
+
+#nav ul li a:hover {
+    filter: brightness(0.92);
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(35, 55, 40, 0.18);
+}
+
+#nav ul li a.active {
+    filter: brightness(0.94);
+    transform: scale(1.04);
+    font-weight: 700;
+    box-shadow: 0 3px 10px rgba(35, 55, 40, 0.15);
+}
+
+#nav ul li a.active:hover {
+    filter: brightness(0.88);
+    transform: scale(1.08);
+}
+
+/* 04. EXPERIENCE ICONS --------------------------------------- */
+#experience .features li:nth-child(1) .icon.major {
+    border-color: #A9C2A3 !important;
+    background-color: #E8F0E57C;
+}
+
+#experience .features li:nth-child(2) .icon.major {
+    border-color: #A9C8D2 !important;
+    background-color: #EAF3F590;
+}
+
+/* 05. SKILLS ------------------------------------------------- */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55em;
+    margin: 1.5em 0;
+}
+
+/* Existing skill-tag markup uses spans; Education does not. */
+.skill-tags span {
+    display: inline-block;
+    padding: 0.25em 0.85em;
+    font-size: 0.9em;
+    border: 1px solid #CABEA1;
+    border-radius: 2em;
+    background-color: #E8E3D7;
+    color: #555555;
+    transition: background-color 0.25s ease, border-color 0.25s ease,
+                transform 0.25s ease;
+}
+
+/* 06. FEATURED PROJECT --------------------------------------- */
+.project-panel {
+    position: relative;
+    max-width: 52em;
+    margin: 0 auto;
+    padding: 2.5em;
+    text-align: left;
+    border: 2px solid #8FA88A;
+    border-radius: 0.85em;
+    background-color: #FAFBF8;
+    box-shadow: 0 6px 20px rgba(35, 55, 40, 0.08);
+}
+
+.project-panel::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border: 1px solid #C8D8C5;
+    border-radius: 0.6em;
+    pointer-events: none;
+}
+
+.project-panel h3 { margin-bottom: 0.5em; }
+.project-panel .actions { margin-top: 1.5em; }
+
+/* 07. EARTHY PAGE BUTTONS ------------------------------------ */
+a.button.button-pastel {
+    --btn-bg: #E8E3D7;
+    --btn-border: #C8C1B3;
+    --btn-text: #000000;
+    min-width: 12em;
+    height: 3.25em;
+    line-height: 3.25em;
+    padding: 0 2em;
+    text-align: center;
+    font-weight: 700 !important;
+    border-radius: 2em;
+    background-color: var(--btn-bg) !important;
+    color: var(--btn-text) !important;
+    box-shadow: inset 0 0 0 1px var(--btn-border) !important;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease,
+                transform 0.25s ease, filter 0.25s ease;
+}
+
+a.button.button-pastel:hover {
+    filter: brightness(0.92);
+    transform: translateY(-2px) scale(1.03);
+    color: var(--btn-text) !important;
+    box-shadow: inset 0 0 0 1px var(--btn-border),
+                0 4px 12px rgba(35, 55, 40, 0.15) !important;
+}
+
+a.button.button-pastel:focus { color: var(--btn-text) !important; }
+
+/* Black text on light buttons, white text on dark botanical. */
+a.button.button-pastel.button-sage       { --btn-bg: #DCE8D5; --btn-border: #B5C9AC; }
+a.button.button-pastel.button-brown      { --btn-bg: #E6D3BF; --btn-border: #C9AD91; }
+a.button.button-pastel.button-neutral    { --btn-bg: #E8E3D7; --btn-border: #C8C1B3; }
+a.button.button-pastel.button-eucalyptus { --btn-bg: #C8D8C5; --btn-border: #9FB89A; }
+a.button.button-pastel.button-taupe      { --btn-bg: #D8C5B3; --btn-border: #B69B82; }
+a.button.button-pastel.button-botanical  { --btn-bg: #355B47; --btn-border: #294735; --btn-text: #FFFFFF; }
+
+/* 08. EDUCATION CARD ----------------------------------------- */
+.education-card {
+    max-width: 42em;
+    margin: 2em auto 0;
+    padding: 2.75em 2em;
+    background-color: #FBF8F4;
+    border: 2px solid #B69B82;
+    border-radius: 0.85em;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(70, 55, 44, 0.08);
+}
+
+.education-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5em;
+    height: 3.5em;
+    margin: 0 auto 1.25em;
+    background-color: #EDE2D6;
+    color: #604B3C;
+    border: 1px solid #B69B82;
+    border-radius: 50%;
+    font-size: 1.2em;
+}
+
+.education-card h3 {
+    color: #46372C;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.education-degree {
+    color: #604B3C;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.education-degree::after {
+    content: "";
+    display: block;
+    width: 8em;
+    height: 2px;
+    margin: 1.25em auto 1em;
+    background-color: #B69B82;
+    border-radius: 2em;
+}
+
+.education-honors {
+    color: #77695D;
+    font-size: 0.95em;
+    margin-bottom: 0;
+}
+
+.education-honors em { color: #604B3C; }
+
+/* 09. SECTION HEADINGS --------------------------------------- */
+#main header.major h2 {
+    color: #355B47;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+}
+
+#main header.major h2::after {
+    background-image: linear-gradient(90deg, #D8C5B3, #A9BDA5, #355B47) !important;
+    height: 4px;
+    border-radius: 3em;
+}
+
+/* 10. RESPONSIVE LAYOUT -------------------------------------- */
+@media screen and (max-width: 736px) {
+    #header {
+        width: calc(100% - 1.5em);
+        max-width: 100%;
+        margin: 1em auto 2em;
+        padding: 3em 1.75em;
+        box-sizing: border-box;
+    }
+
+    #header::before { inset: 10px; }
+
+    #header h1 {
+        font-size: clamp(1.9rem, 8vw, 2.7rem);
+        overflow-wrap: break-word;
+    }
+
+    #header p { font-size: 1rem; line-height: 1.65; }
+
+    #header .actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75em;
+    }
+
+    /* Stellar normally hides navigation at mobile widths. */
+    #nav {
+        display: block !important;
+        padding: 0.75em 0.5em;
+        border-radius: 0.65em 0.65em 0 0;
+    }
+
+    #nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5em;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav ul li { margin: 0; padding: 0; }
+
+    #nav ul li a {
+        display: block;
+        padding: 0.65em 0.9em;
+        height: auto;
+        line-height: 1.3;
+        font-size: 0.85em;
+        white-space: nowrap;
+    }
+
+    /* The original file had 1.6em and 1.3em; 1.3em won. */
+    .project-panel { padding: 1.3em; }
+
+    .education-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 2em 1.25em;
+        box-sizing: border-box;
+    }
+
+    .education-card h3 { font-size: 1.25em; line-height: 1.4; }
+    .education-degree { font-size: 1em; line-height: 1.6; }
+    .education-degree::after { width: 6em; margin: 1em auto; }
+}
+
+/* Fixed background attachments can behave poorly on iOS/touch devices. */
+@media (hover: none) and (pointer: coarse) {
+    body { background-attachment: scroll !important; }
+}
+
+/* 11. ACCESSIBILITY ------------------------------------------ */
+#nav ul li a:focus-visible,
+a.button.button-pastel:focus-visible {
+    outline: 2px solid #72947C;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #nav ul li a,
+    .skill-tags span,
+    a.button.button-pastel { transition: none; }
+
+    #nav ul li a:hover,
+    #nav ul li a.active,
+    #nav ul li a.active:hover,
+    a.button.button-pastel:hover { transform: none; }
+}
