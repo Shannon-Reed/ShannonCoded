@@ -11,7 +11,7 @@ body {
     background-color: #15291E !important;
     background-image:
         linear-gradient(rgba(38, 61, 49, 0.8), rgba(38, 61, 49, 0.8)),
-        url("Images/mossy-stone.jpg") !important;
+        url("../../Images/mossy-stone.jpg") !important;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -54,8 +54,10 @@
           <p>Developed and maintained Java-based applications and IVR workflows, integrating enterprise services and supporting testing and deployments.</p>
         </li>
       </ul>
-      <!-- TODO <ul class="actions special"><li><a href="history.html" class="button">View Work History</a></li></ul> -->
+      <!-- 
 	  <ul class="actions special"><li><a href="history.html" class="button button-pastel button-taupe ">View Work History</a></li></ul>
+	   -->
+	</section>		
 	</section>
     <section id="skills" class="main special">
       <header class="major"><h2>Technical Skills</h2><p>Technologies I've worked with professionally and through personal learning.</p></header>
@@ -97,13 +99,20 @@
     <section id="projects" class="main special">
       <header class="major"><h2>Featured Project</h2><p>Exploring backend engineering through hands-on development.</p></header>
       <div class="project-panel">
-        <h3>SIP Routing Flow</h3>
-        <p><strong>Go · HTTP APIs · PostgreSQL · Cloud Database · Automated Tests</strong></p>
-        <p>A personal Go backend project exploring call-routing workflows. It uses an HTTP service, routing logic, database persistence, and automated tests to demonstrate service design and reliable data handling.</p>
-        <p><em>Source code and additional technical details coming soon.</em></p>
-      </div>
+        <h3><strong>SIP Routing Flow</strong></h3>
+		<h3><strong>Cloud-Hosted Routing and Analytics Platform</strong></h3>
+		<p>A containerized backend application that simulates SIP call-routing decisions using configurable, region-based routing rules and fallback logic.</p>
+		<p>Developed a Go REST API to select routing destinations and persist call records in PostgreSQL, alongside a Python FastAPI service that provides call-routing analytics.</p>
+		<p>Deployed both services to AWS ECS Fargate using Docker and Amazon ECR, with secure database credentials managed through AWS Secrets Manager and application monitoring through CloudWatch.</p>
+        <p><strong>Go · Python · FastAPI · PostgreSQL · Docker · AWS ECS · ECR · CloudWatch · Secrets Manage</strong></p>
+		<ul class="actions special"><li><a href="https://github.com/Shannon-Reed/SIP-Routing-Flow" class="button button-pastel button-sage">View Source Code</a></li></ul>
+		<!-- <ul class="actions special"><li><a href="projects.html" class="button button-pastel button-sage">View More Details</a></li></ul>
+	  -->
+	</div>
     </section>
+
     <section id="education" class="main special">
+		<header class="major"><h2>Education</h2></header>
 		<div class="education-card">
 			<div class="education-icon">
 				<i class="icon solid fa-graduation-cap"></i>
@@ -120,6 +129,7 @@
 			</p>
 		</div>
     </section>
+
   </div>
   <footer id="footer">
     <section>
@@ -139,12 +149,12 @@
     <p class="copyright">&copy; 2026 Shannon Reed. Design adapted from <a href="https://html5up.net">HTML5 UP</a>.</p>
   </footer>
 </div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="Assets/js/jquery.min.js"></script>
+<script src="Assets/js/jquery.scrollex.min.js"></script>
+<script src="Assets/js/jquery.scrolly.min.js"></script>
+<script src="Assets/js/browser.min.js"></script>
+<script src="Assets/js/breakpoints.min.js"></script>
+<script src="Assets/js/util.js"></script>
+<script src="Assets/js/main.js"></script>
 </body>
 </html>
