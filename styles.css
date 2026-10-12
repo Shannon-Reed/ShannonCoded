@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shannon Reed</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Shannon Reed</h1>
+   
+<div class="sections">
+    <!-- About Me -->
+    <section class="section">
+      <a href="files/problem-statement.pdf"><h2>About Me</h2></a>
+      <a href="files/problem-statement.pdf"><img src="images/problem-statement.png"></a>
+      <p>
+          I recently graduated with a Bachelor of Science in Computer Science from the College of Engineering and Computing at the University of South Carolina.
+          Input rest here:
+          Code example?
+      </p>
+    </section>
+    
+    <!-- Resume -->
+     <section class="section">
+       <a href="files/resume.pdf"><h2>My Resume</h2></a>
+       <a href="files/resume.pdf"><img src="images/resume.pdf"></a>
+    </section>
+
+    
+     <!-- Portfolio  -->
+       <section class="section">
+        <a href="files/StoryBoard.pdf"><h2>Portfolio</h2></a>
+        <p>
+            Previous Projects I have worked on.
+        </p>
+     </section>
+    
+
+      <!-- attaching a video example 
+      <section class="assignment">
+        <a href="https://www.youtube.com/watch?v=zuFr9nCP0xc&t=5s"><h2>Paper Prototype</h2></a>
+        <a href="https://www.youtube.com/watch?v=zuFr9nCP0xc&t=5s"><img src="images/prototype.png"></a>
+        <p>
+              A paper walkthrough of the potential look of every screen in the application.
+         </p>
+      </section> -->
+  
+      <!-- html attachment example
+      <section class="assignment">
+        <a href="files/solo_prototype/preview.html"><h2>Hi-Fi Prototype</h2></a>
+        <a href="files/solo_prototype/preview.html"><img src="images/proto_home.png"></a>
+        <p>
+              A Solo Hi_fi prototype to demonstrate application usability.
+         </p>
+      </section> -->
+    </div>   
+  
+  </body>
+</html>
